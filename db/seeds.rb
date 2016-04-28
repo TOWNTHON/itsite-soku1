@@ -1,3 +1,5 @@
+Site.delete_all
+
 # Insert Data
 
 Site.create!(url: "http://dev.classmethod.jp/", image: "devio.png" , feed: "http://dev.classmethod.jp/feed/", name: "Developers.IO")
