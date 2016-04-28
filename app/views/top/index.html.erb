@@ -1,22 +1,9 @@
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
-<head>
-  <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
-  <title>ITサイト速報</title>
-  <meta http-equiv="content-language" content="ja" />
-  <meta http-equiv="Content-Script-Type" content="text/javascript">
-  <meta name="description" content="「ITサイト」をまとめています" />
-  <meta name="keywords" content="IT,ITサイト,itsite-soku" />
-  <link href="style.css" rel="stylesheet" type="text/css" />
-  <link href="css/paper.css" rel="stylesheet" type="text/css" />
-</head>
-
-<body>
 <div class="container">
+  <div class="row">
   <div class="jumbotron">
     <h1>ITサイト速報</h1>
     <p class="text-info">（∪＾ω＾）IT速報だよっ！</p>
+  </div>
   </div>
 
 <!--  <div id="navigation">
@@ -25,8 +12,6 @@
   	</ul>
   </div>
 -->
-
-  <div id="content">
 
     <% @sites.each_with_index do |site,index| %>
 
@@ -59,13 +44,8 @@
     <% end %>
 
 
-
-  </div>
-
-  <div id="footer"></div>
+    </div>
   <div id="copyright">
     <div align="center">copyright &copy;  itsite-soku All Rights Reserved. </div>
   </div>
 </div>
-</body>
-</html>
