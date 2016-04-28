@@ -15,7 +15,7 @@
 <body>
 <div class="container">
   <div class="jumbotron">
-    <h1>itsite-soku</h1>
+    <h1>ITサイト速報</h1>
     <p class="text-info">（∪＾ω＾）IT速報だよっ！</p>
   </div>
 
@@ -28,10 +28,18 @@
 
   <div id="content">
 
-    <% @sites.each do |site| %>
+    <% @sites.each_with_index do |site,index| %>
+
+    <% if index % 3 == 0 %>
+      <div class="row">
+    <% else %>
+    <% end %>
+
+
+
     <div class="sitebox col-md-4">
       <div class="sitename panel panel-heading panel-title"><%= link_to site.name, site.url %></div>
-      <%= link_to image_tag(site.image, alt: "",:width => '100%')%>
+        <%= link_to image_tag(site.image, alt: "",:width => '100%')%>
       <div class=rssbox>
         <% site.items.take(4).each do |article| %>
         <table class="table table-striped table-hover ">
@@ -43,6 +51,10 @@
         </tbody>
         </table>
       </div>
+    <% if index % 3 == 2 %>
+      </div>
+    <% else %>
+    <% end %>
     </div>
     <% end %>
 
